@@ -1,0 +1,22 @@
+class GravityCalculator
+{
+	public static void main(String[] args)
+	{
+		try
+		{
+			double result = (0.5*(Math.pow(-9.81*10,2)))+(0*10)+0;
+			System.out.println("Gravity Calculator = "+result);
+			throw new ArithmeticException();
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println("Can't divide by zero " + e.toString());
+		}
+		finally
+		{
+			System.out.println("finally block executed");
+		}
+		
+	}
+}
+

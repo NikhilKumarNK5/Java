@@ -1,0 +1,67 @@
+import java.util.*;
+
+class Cricket 
+{
+
+    void TeamID(int choice)
+	{
+        if (choice == 145) 
+		{
+            System.out.println("The following Players Belong to the Indian Team");
+            System.out.println("M.S. Dhoni" + "Sachin Tendulkar" + " " + "Virat Kohli" + " " + "Rohit sharma" + " " + "Jasprit Bumrah" + " " + "R. Jadega");
+        } else if (choice == 253)
+		{
+            System.out.println("The following Players Belong to the Autralian Team");
+            System.out.println("Shane Watson" + " " + "David Warner" + " " + "Mitchel Starc" + " " + "Steven Smith " + " " + "Pat Cummins");
+
+        } else if (choice == 376)
+		{
+            System.out.println("The following Players Belong to the England Team");
+            System.out.println("Ben Stokes" + " " + "Joe Root" + "Sam Curran" + " " + "Moeen Ali" + " " + "Jack Leach" + " " + "Stuart Broad");
+        }
+
+    }
+
+    void PlayerID(int ch) 
+	{
+        if (ch == 1489)
+		{
+            System.out.println("Indian Player");
+        } else if (ch == 8792)
+		{
+            System.out.println("Australian Player");
+        } else if (ch == 9657) 
+		{
+            System.out.println("English Player");
+        }
+
+    }
+
+    public static void main(String[] args)
+	{
+
+        System.out.println("The Cricket Tri-Series is between : ");
+        System.out.println("India" + "," + "Australia" + "and" + "England");
+        Cricket obj = new Cricket();
+        System.out.println("Information Regarding teams players of different countries is");
+        System.out.println("Enter the TeamID");
+        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        int choice = sc.nextInt();
+        obj.TeamID(choice);
+        System.out.println("Enter PlayerID to know about his team");
+        String name;
+        name = scan.nextLine();
+
+        //String vk = "virat kohli";
+        if (name.equals("3545") || name.equals("2324") || name.equals("2452")) {
+            obj.PlayerID(1489);
+        }
+        if (name.equals("6543") || name.equals("3434") || name.equals("1231")) {
+            obj.PlayerID(8792);
+        }
+        if (name.equals("4563") || name.equals("5474") || name.equals("4334")) {
+            obj.PlayerID(9657);
+        }
+    }
+}
